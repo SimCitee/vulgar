@@ -26,7 +26,7 @@ export interface IUser {
     email: string;
   };
   role: string;
-  _id: any;
+  _id: mongodb.ObjectID;
 }
 
 export class User implements IUser {
@@ -36,7 +36,7 @@ export class User implements IUser {
     email: string;
   };
   role: string;
-  _id: any;
+  _id: mongodb.ObjectID;
 
   constructor(data: IUser, role: string) {
     this.local.username = data.local.username;
